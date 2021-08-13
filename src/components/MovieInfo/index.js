@@ -2,6 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 // components
 import Thumb from '../Thumb'
+import Rate from '../Rate'
 // config 
 import { IMAGE_BASE_URL , POSTER_SIZE } from '../../config'
 // Image 
