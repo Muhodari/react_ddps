@@ -9,9 +9,25 @@ import { Wrapper } from './Login.styles'
 import { Context } from '../context'
 
 const Login = () => {
+const[username,setUsername] = useState('');
+const [password,setPassword] = useState('')
+const [error ,setError] = useState(false)
+
+const [_user,setUser] = useContext(Context)
+
+const navigate = useNavigate();
+
 
     const handleSubmit = ()=>{};
-    const handleInput = e =>{};
+
+    const handleInput = e =>{
+        const name = e.currentTarget.name;
+        const value = e.currentTarget.value
+     
+        if(name === 'username') setUsername(value)
+        if(name === 'password') setPassword(value)
+
+    };
 
     return(
 
@@ -19,14 +35,14 @@ const Login = () => {
         <label>Username:</label>
         <input
           type='text'
-           value='state value'
+           value={username}
            name ='username'
            onChange={handleInput}
            />
            <label>Password:</label>
            <input 
            type='password'
-           value='state value'
+           value={password}
            name='password'
            onChange={handleInput}
            />
